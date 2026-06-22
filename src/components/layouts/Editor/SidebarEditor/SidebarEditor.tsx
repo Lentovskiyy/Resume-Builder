@@ -8,7 +8,7 @@ const SidebarEditor = () => {
     <aside className="w-full h-full bg-[#121824] border-r border-slate-800 p-5 flex flex-col select-none antialiased">
       <div className="px-2">
         <Link
-          href="/my-app/public"
+          href="/"
           className="text-2xl font-black font-mono tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-gray-50 via-slate-100 to-slate-300 uppercase"
         >
           Rezi<span className="text-indigo-400 font-sans">.</span>
@@ -25,13 +25,14 @@ const SidebarEditor = () => {
         </button>
 
         <div className="space-y-1.5">
-          <button
+          <Link
+            href="/editor/resumes"
             type="button"
             className="w-full flex items-center gap-3.5 p-3 rounded-lg border border-indigo-500/30 bg-[#1e1b4b]/50 font-mono font-bold text-xs tracking-wider uppercase shadow-[0_0_15px_rgba(99,102,241,0.05)]"
           >
             <span className="text-base text-indigo-400">📊</span>
             <span className="font-bold tracking-wide text-white uppercase">My Dashboard</span>
-          </button>
+          </Link>
 
           {/* AI Resume Agent */}
           <button
