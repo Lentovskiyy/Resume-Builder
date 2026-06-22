@@ -2,7 +2,7 @@ import ResumeHeader from "@/components/layouts/Editor/ResumeHeader/ResumeHeader"
 import CoverLetterEditor from "@/components/layouts/Editor/CoverLetterEditor/CoverLetterEditor";
 
 
-const Home = () =>  {
+const CVPage = () =>  {
   return (
     <>
       <ResumeHeader/>
@@ -11,4 +11,4 @@ const Home = () =>  {
   );
 }
 
-export default Home;
+export default CVPage;

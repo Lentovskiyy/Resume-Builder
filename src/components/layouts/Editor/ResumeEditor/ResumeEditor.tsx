@@ -37,17 +37,9 @@ const ResumeEditor =  () => {
         setIsLoading(false);
       }
     };
+
+    fetchResumes()
   }, [])
-
-  const openCreateModal = () => {
-    setIsOpen(!isOpen);
-    if (isDropdownOpen) setIsDropdownOpen(false);
-
-    if (isOpen) {
-      setResumeName("");
-      setSelectedExperience("Select...");
-    }
-  };
 
   useEffect(() => {
     if (isOpen) {
@@ -60,6 +52,16 @@ const ResumeEditor =  () => {
     };
   }, [isOpen]);
 
+  const openCreateModal = () => {
+    setIsOpen(!isOpen);
+    if (isDropdownOpen) setIsDropdownOpen(false);
+
+    if (isOpen) {
+      setResumeName("");
+      setSelectedExperience("Select...");
+    }
+  };
+
   const isFormValid = resumeName.trim() !== "" && selectedExperience !== "Select...";
 
   const onSubmit = async (e?: React.FormEvent) => {
@@ -68,6 +70,14 @@ const ResumeEditor =  () => {
 
     try {
       const newId = await handleResumeCreation({name: resumeName, experience: selectedExperience})
+
+      const newResume: IResumeItem = {
+        id: newId,
+        name: resumeName,
+        experience: selectedExperience
+      };
+
+      setResumes((prevResumes) => [newResume, ...prevResumes]);
 
       setIsOpen(false);
       setResumeName("");

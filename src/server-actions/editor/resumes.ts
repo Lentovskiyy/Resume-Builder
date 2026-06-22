@@ -1,3 +1,5 @@
+"use server"; // 👈 ВОТ ЭТА СТРОКА ИСПРАВИТ ВСЁ!
+
 import  {createResume, getUserResumes} from "@/services/editor/resumes";
 
 interface ICreateResumeArgs {

@@ -4,7 +4,7 @@ import Footer from "@/components/layouts/Footer/Footer";
 import { createClient } from "@/services/supabase/serverMain";
 
 
-const Home = async () =>  {
+const LoginPage = async () =>  {
   // 1. Initialize Supabase and check if the user cookie is present
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
@@ -24,4 +24,4 @@ const Home = async () =>  {
   );
 }
 
-export default Home;
+export default LoginPage;

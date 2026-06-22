@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 interface PageProps {
-  // 1. Changed string to string[] because [id] creates an array on Windows/Next.js
   params: Promise<{ id: string, section: string }>;
   searchParams: Promise<{ name?: string; experience?: string }>;
 }

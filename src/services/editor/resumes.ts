@@ -1,3 +1,5 @@
+"use server"; // 👈 ВОТ ЭТА СТРОКА ИСПРАВИТ ВСЁ!
+
 import {createClient} from "@/services/supabase/serverMain";
 
 interface ICreateResumeArgs {

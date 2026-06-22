@@ -1,7 +1,7 @@
 import ResumeEditor from "@/components/layouts/Editor/ResumeEditor/ResumeEditor";
 import ResumeHeader from "@/components/layouts/Editor/ResumeHeader/ResumeHeader";
 
-const Home = () =>  {
+const ResumesPage = () =>  {
   return (
     <>
       <ResumeHeader/>
@@ -10,4 +10,4 @@ const Home = () =>  {
   );
 }
 
-export default Home;
+export default ResumesPage;
