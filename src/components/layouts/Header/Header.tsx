@@ -6,9 +6,12 @@ interface IHeaderProps {
 
 const Header = (props: IHeaderProps) => {
   return (
-    <header className="flex justify-between items-center px-16 py-4 bg-gray-600/20 border-b-2 border-gray-200/40 sticky top-0 z-50 backdrop-blur-sm backdrop-saturate-150 shadow-[0_8px_32px_0_rgba(0,0,0,0.04)]">
+    <header
+      className="flex justify-between items-center px-16 py-4 bg-gray-600/20 border-b-2 border-gray-200/40 sticky top-0 z-50 backdrop-blur-sm backdrop-saturate-150 shadow-[0_8px_32px_0_rgba(0,0,0,0.04)]">
+
       <Link href="/" className="flex items-center gap-2 group">
-        <div className="w-8 h-8 rounded-lg bg-gray-950 flex items-center justify-center font-mono font-black text-sm text-white border border-gray-950">
+        <div
+          className="w-8 h-8 rounded-lg bg-gray-950 flex items-center justify-center font-mono font-black text-sm text-white border border-gray-950">
           {"[ ]"}
         </div>
         <span className="text-xl font-black text-gray-950 tracking-tight font-mono">

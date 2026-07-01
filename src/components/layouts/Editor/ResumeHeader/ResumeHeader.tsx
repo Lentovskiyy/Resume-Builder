@@ -18,7 +18,7 @@ const ResumeHeader = () => {
   return (
     <header className="bg-gray-900 flex px-6 py-4 items-center justify-between w-full">
       <div className="flex items-center gap-1 bg-[#161f30] border border-slate-800 p-1 rounded-lg text-xs">
-        <Link href="/editor/resumes" className={getLinkClass("/editor/resumes")}>
+        <Link href="/editor/resumes" className={getLinkClass("/editor/resume")}>
           Resumes
         </Link>
         <Link href="/editor/cover-letters" className={getLinkClass("/editor/cover-letters")}>

@@ -85,14 +85,6 @@ const ResumeEditor =  () => {
     } catch {
       throw new Error("Error creating Resume");
     }
-
-    // const newResume: IResumeItem = {
-    //   id: crypto.randomUUID(), // Generates a unique clean ID string for the page path
-    //   name: resumeName,
-    //   experience: selectedExperience
-    // };
-    //
-    // setResumes((prevResumes) => [...prevResumes, newResume]);
   };
 
   const onResumeClick = (resume: IResumeItem) => {
