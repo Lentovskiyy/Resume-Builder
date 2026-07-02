@@ -85,7 +85,7 @@ const ExperienceSection = ({ id, name, experience }: IContactSectionProps)=> {
               For which company did you work?
             </label>
             <input
-              type="email"
+              type="text"
               value={formData?.company || ""}
               onChange={(e) => handleInputChange("company", e.target.value)}
               className="w-full bg-[#161f30] border border-slate-700/50 focus:border-indigo-500 rounded-lg px-4 py-3 text-sm text-slate-200 outline-none transition-colors"
@@ -151,7 +151,7 @@ const ExperienceSection = ({ id, name, experience }: IContactSectionProps)=> {
             type="submit"
             className="bg-[#6366f1] hover:bg-[#4f46e5] text-white font-bold text-xs tracking-wider uppercase px-6 py-3 rounded-lg shadow-md transition-all duration-150 cursor-pointer"
           >
-            Save Contact Info
+            Save Experience Info
           </button>
         </div>
       </form>
