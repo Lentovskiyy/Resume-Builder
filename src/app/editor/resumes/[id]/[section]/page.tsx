@@ -39,8 +39,6 @@ export default async function ResumeDetailsPage({ params, searchParams }: PagePr
         resumeId={id}
       />
 
-
-
       {ActiveSectionComponent ? (
         <ActiveSectionComponent
           id={id}
