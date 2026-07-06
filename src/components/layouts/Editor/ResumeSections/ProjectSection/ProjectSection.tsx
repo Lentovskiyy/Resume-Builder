@@ -11,7 +11,7 @@ interface IContactSectionProps {
 }
 
 const ProjectSection = ({ id, name, experience }: IContactSectionProps)=> {
-  const [formData, setFormData] = useState<IResumeContent["projects"]>({
+  const [formData, setFormData] = useState<IResumeContent["project"]>({
     title: "",
     organization: "",
     startDate: "",
@@ -35,7 +35,7 @@ const ProjectSection = ({ id, name, experience }: IContactSectionProps)=> {
     getContent()
   }, [id])
 
-  const handleInputChange = (field: keyof IResumeContent["projects"], value: string) => {
+  const handleInputChange = (field: keyof IResumeContent["project"], value: string) => {
     setFormData((prev) => {
       const currentData = prev || {
         title: "",
@@ -57,7 +57,7 @@ const ProjectSection = ({ id, name, experience }: IContactSectionProps)=> {
     e.preventDefault();
 
     try {
-      const result  = await handleResumeUpdate(id, "projects", formData)
+      const result  = await handleResumeUpdate(id, "project", formData)
     } catch (error) {
       console.error("Error saving contact info:", error);
     }

@@ -72,9 +72,9 @@ export interface ISummary {
 export interface IResumeContent {
   contact?: IContact;
   experience?: IExperience;
-  projects?: IProject;
+  project?: IProject;
   education?: IEducation;
-  certifications?: ICertification;
+  certification?: ICertification;
   coursework?: ICoursework;
   involvement?: IInvolvement;
   skills?: ISkill;
