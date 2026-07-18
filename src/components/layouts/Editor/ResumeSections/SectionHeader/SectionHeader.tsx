@@ -14,7 +14,7 @@ const SectionHeader = ({currentSection, resumeId}: ISectionHeaderProps) => {
     { name: "Certification", id: "certification" },
     { name: "Coursework", id: "coursework" },
     { name: "Involvement", id: "involvement" },
-    { name: "Skills", id: "skills" },
+    { name: "Skills", id: "skill" },
     { name: "Summary", id: "summary" },
     { name: "Finish & Preview", id: "preview" },
   ];

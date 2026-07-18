@@ -13,7 +13,7 @@ interface IContactSectionProps {
 
 const ContactSection = ({ id, name, experience }: IContactSectionProps) => {
   const [formData, setFormData] = useState<IResumeContent["contact"]>({
-    fullName: "w",
+    fullName: "",
     email: "",
     phoneNumber: "",
     linkedin: "",

@@ -8,13 +8,14 @@ import InvolvementSection from "@/components/layouts/Editor/ResumeSections/Invol
 import ProjectSection from "@/components/layouts/Editor/ResumeSections/ProjectSection/ProjectSection";
 import SkillSection from "@/components/layouts/Editor/ResumeSections/SkillSection/SkillSection";
 import SummarySection from "@/components/layouts/Editor/ResumeSections/SummarySection/SummarySection";
+import PreviewSection from "@/components/layouts/Editor/ResumeSections/PreviewSection/PreviewSection";
 
-interface PageProps {
+interface IProps {
   params: Promise<{ id: string, section: string }>;
   searchParams: Promise<{ name?: string; experience?: string }>;
 }
 
-export default async function ResumeDetailsPage({ params, searchParams }: PageProps) {
+export default async function ResumeDetailsPage({ params, searchParams }: IProps) {
   const { id, section } = await params;
   const { name, experience } = await searchParams;
 
@@ -22,12 +23,13 @@ export default async function ResumeDetailsPage({ params, searchParams }: PagePr
     contact: ContactSection,
     education: EducationSection,
     experience: ExperienceSection,
-    skills: SkillSection,
+    skill: SkillSection,
     summary: SummarySection,
     project: ProjectSection,
     certification: CertificationSection,
     coursework: CourseWork,
     involvement: InvolvementSection,
+    preview: PreviewSection
   }
 
   const ActiveSectionComponent = sectionMap[section.toLowerCase()];

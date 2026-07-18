@@ -70,4 +70,63 @@
 }
 
 
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #364153FF;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1E2939FF;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  /* 2. Показываем ТОЛЬКО холст резюме и всё, что находится внутри него */
+  #resume-pdf-canvas,
+  #resume-pdf-canvas * {
+    visibility: visible;
+  }
+
+  /* 3. Выбиваем холст из общего потока, чтобы он встал ровно в верхний левый угол листа А4 */
+  #resume-pdf-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 10mm;
+    box-shadow: none;
+  }
+
+  /* 4. Настройки самого печатного листа */
+  @page {
+    size: 210mm 297mm; /* Намертво фиксирует А4 */
+    margin: 0;          /* Убирает даты, урлы и поля браузера */
+  }
+
+  body {
+    -webkit-print-color-adjust: exact; /* Сохраняет цвета Tailwind */
+    print-color-adjust: exact;
+    }
+}
 

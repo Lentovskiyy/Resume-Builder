@@ -49,8 +49,6 @@ export async function handleResumeUpdate  <K extends keyof IResumeContent>(
   }
 }
 
-
-
 export async function handleResumeContentGetter (id: string) {
   try {
     const content = await getUserResumeContent(id);

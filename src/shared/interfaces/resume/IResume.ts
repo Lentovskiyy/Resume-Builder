@@ -77,7 +77,7 @@ export interface IResumeContent {
   certification?: ICertification;
   coursework?: ICoursework;
   involvement?: IInvolvement;
-  skills?: ISkill;
+  skill?: ISkill;
   summary?: ISummary;
 }
 
